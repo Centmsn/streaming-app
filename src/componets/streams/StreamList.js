@@ -46,7 +46,9 @@ class StreamList extends Component {
         <div className="item" key={stream.id}>
           {this.renderButtons(stream)}
           <i className="large middle aligned icon camera" />
-          <div className="content">{stream.title}</div>
+          <Link to={`/streams/${stream.id}`} className="header">
+            <div className="content">{stream.title}</div>
+          </Link>
           <div className="description">{stream.description}</div>
         </div>
       );
